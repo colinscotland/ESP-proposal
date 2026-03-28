@@ -77,376 +77,736 @@
   .hero-tag {
     display: inline-block;
     font-family: var(--font-heading);
-    font-weight: 600;
     font-size: 12px;
-    letter-spacing: 0.05em;
+    font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
     color: var(--amplify-valencia);
     background: var(--amplify-valencia-soft);
-    padding: 8px 12px;
-    border-radius: 6px;
+    padding: 6px 14px;
+    border-radius: 4px;
     margin-bottom: 24px;
   }
   .hero h1 {
     font-family: var(--font-heading);
+    font-size: 48px;
     font-weight: 700;
-    font-size: 52px;
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    color: var(--amplify-black);
+    margin-bottom: 20px;
+  }
+  .hero .subtitle {
+    font-size: 19px;
+    color: #666;
+    max-width: 560px;
+    line-height: 1.65;
+  }
+
+  /* Sections */
+  section {
+    padding: 56px 0;
+    border-top: 1px solid #EBEBEB;
+  }
+  .section-label {
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--amplify-valencia);
+    margin-bottom: 12px;
+  }
+  section h2 {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
     margin-bottom: 24px;
     color: var(--amplify-black);
   }
-  .hero p {
-    font-size: 18px;
-    color: rgba(13, 13, 13, 0.7);
-    margin-bottom: 32px;
-    max-width: 600px;
-  }
-  .cta-button {
-    display: inline-block;
+  section h3 {
     font-family: var(--font-heading);
+    font-size: 20px;
     font-weight: 600;
-    font-size: 14px;
-    padding: 14px 28px;
-    background: var(--amplify-valencia);
-    color: var(--amplify-white);
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
+    letter-spacing: -0.01em;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    color: var(--amplify-black);
   }
-  .cta-button:hover {
-    background: #B83A1F;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(209, 75, 40, 0.3);
+  section p {
+    margin-bottom: 16px;
+    color: #444;
+  }
+  section p:last-child {
+    margin-bottom: 0;
   }
 
-  /* Content Sections */
-  .section {
-    padding: 64px 0;
-    border-bottom: 1px solid rgba(13, 13, 13, 0.08);
-  }
-  .section:last-of-type {
-    border-bottom: none;
-  }
-  .section h2 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: var(--amplify-black);
-  }
-  .section-subtitle {
-    font-size: 17px;
-    color: rgba(13, 13, 13, 0.6);
-    margin-bottom: 40px;
-    max-width: 700px;
-  }
-  .feature-grid {
+  /* Two-tier card */
+  .tier-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 40px;
+    gap: 20px;
+    margin: 28px 0;
   }
-  .feature-card {
+  .tier-card {
+    border: 1px solid #E4E4E4;
+    border-radius: 10px;
     padding: 28px;
-    background: #F8F8F8;
-    border-radius: 12px;
-    border: 1px solid rgba(13, 13, 13, 0.08);
-    transition: all 0.3s ease;
+    background: #FAFAFA;
+    transition: box-shadow 0.2s;
   }
-  .feature-card:hover {
-    background: var(--amplify-valencia-soft);
-    border-color: var(--amplify-valencia);
-    transform: translateY(-4px);
+  .tier-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   }
-  .feature-card h3 {
+  .tier-card .tier-label {
     font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--amplify-valencia);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tier-card .tier-label::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background: var(--amplify-valencia);
+  }
+  .tier-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .pipeline-note {
+    font-size: 15px;
+    color: #444;
+    font-weight: 500;
+    margin-top: 12px;
+    padding: 16px 20px;
+    background: var(--amplify-valencia-soft);
+    border-radius: 8px;
+    border-left: 3px solid var(--amplify-valencia);
+  }
+
+  /* Bullet lists */
+  ul {
+    list-style: none;
+    margin: 16px 0;
+    padding: 0;
+  }
+  ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--amplify-valencia);
+  }
+
+  /* Highlight box */
+  .highlight-box {
+    background: #F7F7F7;
+    border-left: 3px solid var(--amplify-valencia);
+    padding: 24px 28px;
+    margin: 28px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .highlight-box p {
+    font-size: 16px;
+    color: #444;
+  }
+
+  /* What Grant does */
+  .grant-box {
+    background: var(--amplify-black);
+    border-radius: 12px;
+    padding: 36px 36px 32px;
+    margin: 32px 0;
+    color: var(--amplify-white);
+    position: relative;
+    overflow: hidden;
+  }
+  .grant-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at top right, rgba(209,75,40,0.15), transparent 70%);
+    pointer-events: none;
+  }
+  .grant-box h3 {
+    color: var(--amplify-white);
+    margin-top: 0;
+    font-size: 22px;
+  }
+  .grant-box ul li {
+    color: rgba(255,255,255,0.85);
+  }
+  .grant-box ul li::before {
+    background: var(--amplify-valencia);
+  }
+  .grant-box .tagline {
+    font-size: 15px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 20px;
+    font-style: italic;
+  }
+
+  /* Metrics grid */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 28px 0;
+  }
+  .metric-item {
+    padding: 18px 22px;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #444;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #FAFAFA;
+    transition: border-color 0.2s;
+  }
+  .metric-item:hover {
+    border-color: var(--amplify-valencia);
+  }
+  .metric-item .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--amplify-valencia);
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  /* Not list */
+  .not-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 24px 0;
+  }
+  .not-item {
+    padding: 24px;
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+    background: #FAFAFA;
+  }
+  .not-item strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
     color: var(--amplify-black);
   }
-  .feature-card p {
-    font-size: 15px;
-    color: rgba(13, 13, 13, 0.6);
+  .not-item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0;
     line-height: 1.6;
   }
 
-  /* Stats Section */
-  .stats-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px;
-    margin-top: 40px;
+  /* Investment section */
+  .investment-section {
+    background: linear-gradient(135deg, #F8F8F8 0%, #F2F2F2 100%);
+    border-radius: 14px;
+    padding: 44px;
+    margin: 28px 0;
+    border: 1px solid #E8E8E8;
   }
-  .stat-item {
-    text-align: center;
-    padding: 24px;
-  }
-  .stat-number {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 44px;
-    color: var(--amplify-valencia);
+  .price-display {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
     margin-bottom: 8px;
   }
-  .stat-label {
-    font-size: 14px;
-    color: rgba(13, 13, 13, 0.6);
+  .price-display .amount {
+    font-family: var(--font-heading);
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--amplify-black);
+    letter-spacing: -0.02em;
+  }
+  .price-display .period {
+    font-size: 18px;
+    color: #999;
+    font-weight: 500;
+  }
+  .price-sub {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 24px;
+  }
+  .price-details {
+    border-top: 1px solid #DDD;
+    padding-top: 20px;
+    margin-top: 24px;
+  }
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #444;
+  }
+  .price-row .label { color: #777; }
+  .price-row .value { font-weight: 600; }
+
+  /* Timeline */
+  .timeline {
+    margin: 28px 0;
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid #F0F0F0;
+    align-items: start;
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-item .month {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--amplify-white);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    padding: 6px 12px;
+    background: var(--amplify-valencia);
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+  }
+  .timeline-item .detail {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.65;
+  }
+
+  /* Next steps */
+  .steps-list {
+    margin: 28px 0;
+  }
+  .step-item {
+    display: flex;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid #F0F0F0;
+    align-items: flex-start;
+  }
+  .step-item:last-child { border-bottom: none; }
+  .step-number {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--amplify-white);
+    background: var(--amplify-valencia);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-text {
+    font-size: 16px;
+    color: #444;
+    padding-top: 5px;
+  }
+
+  /* What we need */
+  .needs-list {
+    margin: 28px 0;
+  }
+  .need-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #F0F0F0;
+    align-items: flex-start;
+  }
+  .need-item:last-child { border-bottom: none; }
+  .need-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--amplify-valencia);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .need-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  .need-text {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.55;
+  }
+  .need-text strong {
+    color: var(--amplify-black);
   }
 
   /* Footer */
   footer {
     background: var(--amplify-black);
-    padding: 40px 0;
-    margin-top: 64px;
+    padding: 36px 0;
+    margin-top: 32px;
   }
   footer .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .footer-branding {
+  .footer-brand {
     display: flex;
     align-items: center;
     gap: 12px;
   }
-  .footer-branding img {
-    width: 32px;
-    height: 32px;
+  .footer-brand img {
+    width: 28px;
+    height: 28px;
+    opacity: 0.5;
   }
-  .footer-text {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
+  .footer-brand span {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
   }
-  .footer-links {
-    display: flex;
-    gap: 32px;
-  }
-  .footer-links a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-  }
-  .footer-links a:hover {
-    color: var(--amplify-white);
+  .footer-meta {
+    font-size: 12px;
+    color: rgba(255,255,255,0.25);
   }
 
   /* Responsive */
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 36px;
-    }
-    .hero p {
-      font-size: 16px;
-    }
-    .feature-grid {
-      grid-template-columns: 1fr;
-    }
-    .stats-container {
-      grid-template-columns: 1fr;
-    }
-    .section h2 {
-      font-size: 28px;
-    }
-    header .container,
-    footer .container {
-      flex-direction: column;
-      gap: 16px;
-    }
-    .footer-links {
-      flex-direction: column;
-      gap: 16px;
-    }
+  @media (max-width: 640px) {
+    .hero { padding: 48px 0 40px; }
+    .hero h1 { font-size: 32px; }
+    .tier-grid { grid-template-columns: 1fr; }
+    .metrics-grid { grid-template-columns: 1fr; }
+    .not-grid { grid-template-columns: 1fr; }
+    .investment-section { padding: 28px; }
+    .price-display .amount { font-size: 32px; }
+    header .container { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .header-meta { text-align: left; }
+    footer .container { flex-direction: column; gap: 12px; align-items: flex-start; }
+    .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+    section { padding: 40px 0; }
+  }
+
+  @media print {
+    body { font-size: 14px; }
+    header { background: #F5F5F5; }
+    .logo-mark span { color: var(--amplify-black); }
+    .header-meta { color: #888; }
+    .hero { padding: 40px 0 32px; background: white; }
+    section { padding: 32px 0; }
+    .grant-box { background: #F5F5F5; color: var(--amplify-black); }
+    .grant-box::before { display: none; }
+    .grant-box h3 { color: var(--amplify-black); }
+    .grant-box ul li { color: #333; }
+    .grant-box .tagline { color: #888; }
+    footer { background: #F5F5F5; }
+    .footer-brand span { color: #888; }
+    .footer-meta { color: #AAA; }
   }
 </style>
 </head>
 <body>
+
 <header>
   <div class="container">
     <div class="logo-mark">
-      <img id="header-logo" src="" alt="Amplify Intelligence Logo">
+      <img src="logo.png" alt="Amplify Intelligence" />
       <span>Amplify Intelligence</span>
     </div>
     <div class="header-meta">
-      <div>ESP Lead Generation</div>
-      <div style="font-size: 12px; margin-top: 4px;">Proposal Document</div>
+      Prepared by Colin Scotland<br>
+      March 2026
     </div>
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="container">
-      <div class="hero-tag">Lead Generation Solution</div>
-      <h1>Amplify Your Email Service Provider with Intelligent Lead Generation</h1>
-      <p>Unlock new revenue streams and expand market reach with our advanced lead generation system designed specifically for email service providers.</p>
-      <button class="cta-button">Get Started</button>
+<div class="hero">
+  <div class="container">
+    <div class="hero-tag">Proposal</div>
+    <h1>Lead Generation<br>System for ESP</h1>
+    <p class="subtitle">An additional engagement focused on one outcome: warm conversations with qualified prospects.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Context -->
+  <section>
+    <div class="section-label">Overview</div>
+    <h2>What this is</h2>
+    <p>Your current engagement ($750/month) handles visibility: LinkedIn posts, blog content, newsletter. That keeps running as-is.</p>
+    <p>This proposal builds an active outreach layer on top of that foundation, designed to turn that visibility into actual meetings.</p>
+  </section>
+
+  <!-- Problem -->
+  <section>
+    <div class="section-label">Context</div>
+    <h2>The problem we're solving</h2>
+    <p>ESP has strong content going out consistently. This engagement builds an active layer on top of that foundation, putting ESP's presence in front of specific decision-makers and starting conversations with them.</p>
+    <p>Grant has been clear about the constraint: anything that relies on him executing outreach tasks will stall. So the system is designed to run without Grant in the loop day-to-day. Linda follows scripted processes. Grant shows up when a conversation is warm and ready.</p>
+  </section>
+
+  <!-- How it works -->
+  <section>
+    <div class="section-label">Approach</div>
+    <h2>How it works</h2>
+
+    <h3>Niche testing, not niche guessing</h3>
+    <p>Rather than betting the full six months on a single vertical, we test up to three niches across the engagement. The planning session with Colin, Grant, and PJ identifies the two or three strongest verticals to target. We run outreach across them in parallel, track which niche produces the best acceptance rates and conversations, and shift volume toward what's working.</p>
+    <p>This means Grant doesn't need to agonize over the "right" niche upfront. The system generates the data, and we follow the results.</p>
+    <p>PJ is already running his own Sales Navigator strategy for foundations. This engagement covers Grant's outreach in separate verticals so there's no overlap.</p>
+
+    <h3>What we build</h3>
+    <p style="color:#999; font-size:13px; text-transform:uppercase; letter-spacing:0.05em; font-weight:500; margin-bottom:20px;">Month 1 setup, refreshed monthly</p>
+
+    <p><strong>Prospect targeting (two tiers)</strong></p>
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div class="tier-label">Tier 1</div>
+        <p>20-30 deeply researched target companies per month with key contacts, recent activity, and potential pain points. Personalized connection messages for each.</p>
+      </div>
+      <div class="tier-card">
+        <div class="tier-label">Tier 2</div>
+        <p>40-50 prospects identified from LinkedIn search using predefined criteria (title, industry, company size). Niche-specific connection message templates.</p>
+      </div>
+    </div>
+    <div class="pipeline-note"><strong>Total pipeline: 60-80 targeted prospects per month</strong>, split across active niches. Prospect lists refreshed monthly so the pipeline never runs dry.</div>
+
+    <p style="margin-top:36px;"><strong>LinkedIn outreach playbook</strong></p>
+    <ul>
+      <li>Connection request messages tailored by prospect type (multiple variants to keep it natural)</li>
+      <li>Post-connection DM sequence that builds rapport over weeks before suggesting a virtual coffee</li>
+      <li>Liking and commenting on prospects' posts to build visibility and familiarity before and during the outreach sequence</li>
+      <li>Comment bank categorized by post type so Linda always has the right response ready</li>
+      <li>All written in Grant's voice, referencing ESP's real client results where relevant</li>
+    </ul>
+
+    <h3>What gets executed each week</h3>
+    <ul>
+      <li>15-25 targeted connection requests from Grant's LinkedIn</li>
+      <li>Like and comment on prospect posts to build visibility and rapport</li>
+      <li>Follow up with new connections via the DM sequence</li>
+      <li>Follow-up DMs to connections from previous weeks</li>
+      <li>Flag warm responses for Grant</li>
+      <li>All activity logged in the tracking spreadsheet</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p><strong>Monthly:</strong> New batch of researched prospects loaded into the system (Tier 1 and Tier 2). 30-minute review with Colin: what's working, which niche is converting, adjust targeting. Refresh outreach templates based on response data.</p>
+    </div>
+
+    <div class="grant-box">
+      <h3>What Grant does</h3>
+      <ul>
+        <li>Shows up for warm conversations when they're flagged</li>
+        <li>30-minute monthly review with Colin to see the numbers and approve any changes</li>
+      </ul>
+      <p class="tagline">Nothing else. The hunting is handled.</p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>The Opportunity</h2>
-      <p class="section-subtitle">Email service providers are uniquely positioned to offer lead generation services. Our platform transforms your ESP infrastructure into a powerful lead generation engine.</p>
-      
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>Integrated Experience</h3>
-          <p>Seamlessly integrate lead generation into your existing ESP platform without disrupting current workflows or customer experiences.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Revenue Acceleration</h3>
-          <p>Generate new revenue streams by offering premium lead generation services to your existing customer base and new markets.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Customer Retention</h3>
-          <p>Provide added value that increases customer lifetime value and reduces churn through comprehensive lead generation capabilities.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Market Differentiation</h3>
-          <p>Stand out in a competitive market by offering integrated lead generation that competitors cannot easily match.</p>
-        </div>
+  <!-- Measurement -->
+  <section>
+    <div class="section-label">Accountability</div>
+    <h2>How we measure it</h2>
+    <p>Everything is transparent. Monthly reporting includes:</p>
+    <div class="metrics-grid">
+      <div class="metric-item"><span class="dot"></span><span>Connection requests sent and accepted (by niche)</span></div>
+      <div class="metric-item"><span class="dot"></span><span>Likes, comments, and engagement actions completed</span></div>
+      <div class="metric-item"><span class="dot"></span><span>DM conversations initiated</span></div>
+      <div class="metric-item"><span class="dot"></span><span>Warm leads flagged for Grant</span></div>
+      <div class="metric-item"><span class="dot"></span><span>Meetings booked</span></div>
+    </div>
+    <p>Monthly review ties activity to outcomes: which niche is producing the best response rates, how many conversations started, how many meetings booked. The data tells us where to focus.</p>
+    <div class="highlight-box">
+      <p><strong>One new fractional CIO engagement from this system would cover the full year's investment several times over.</strong></p>
+    </div>
+  </section>
+
+  <!-- What this is not -->
+  <section>
+    <div class="section-label">Clarity</div>
+    <h2>What this is not</h2>
+    <div class="not-grid">
+      <div class="not-item">
+        <strong>Not a replacement for existing content.</strong>
+        <p>The $750 engagement keeps running. This is a separate layer focused on outreach.</p>
+      </div>
+      <div class="not-item">
+        <strong>Not automated AI agents.</strong>
+        <p>We use AI to produce research, templates, and assets at speed. Outreach is human-executed by Linda. More personal, more authentic, within LinkedIn's terms.</p>
+      </div>
+      <div class="not-item">
+        <strong>Not cold spam.</strong>
+        <p>Connection requests are targeted and personalized. DMs build rapport before asking for anything. Likes and comments add genuine value.</p>
+      </div>
+      <div class="not-item">
+        <strong>Not overlapping with PJ.</strong>
+        <p>PJ handles foundations and direct prospecting. This system works Grant's verticals through engagement and relationship building.</p>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Core Capabilities</h2>
-      <p class="section-subtitle">Our lead generation system provides essential features to help your customers acquire high-quality leads efficiently.</p>
-      
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>Lead Capture Forms</h3>
-          <p>Customizable, high-converting forms that integrate with your email platform. Multi-step forms, progressive profiling, and A/B testing included.</p>
+  <!-- Investment -->
+  <section>
+    <div class="section-label">Investment</div>
+    <h2>Investment</h2>
+    <div class="investment-section">
+      <div class="price-display">
+        <span class="amount">$1,000</span>
+        <span class="period">/ month</span>
+      </div>
+      <p class="price-sub">6-month initial commitment. After six months, continues monthly with no lock-in.</p>
+
+      <p>That covers: monthly prospect research across active niches, LinkedIn outreach playbook and templates, Linda's execution, monthly reporting, and a monthly strategy review with Colin.</p>
+
+      <p>No setup fee. Everything is transparent. Cancel any time after the initial six months.</p>
+
+      <div class="price-details">
+        <div class="price-row">
+          <span class="label">6-month investment</span>
+          <span class="value">$6,000</span>
         </div>
-        <div class="feature-card">
-          <h3>Lead Scoring & Qualification</h3>
-          <p>Automatic lead scoring based on engagement and behavioral data. Intelligent routing ensures sales teams focus on the most promising prospects.</p>
+        <div class="price-row">
+          <span class="label">Total engagement with existing content</span>
+          <span class="value">$1,750/month</span>
         </div>
-        <div class="feature-card">
-          <h3>CRM Integration</h3>
-          <p>Native connectors to popular CRM platforms. Bi-directional sync ensures data consistency and eliminates manual data entry.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Campaign Analytics</h3>
-          <p>Real-time dashboards tracking lead acquisition costs, conversion rates, and ROI. Detailed attribution across all marketing channels.</p>
-        </div>
+      </div>
+    </div>
+
+    <p>The 6-month commitment exists for one reason: this system needs time to build momentum. Month 1 is infrastructure. Month 2 is ramp. Months 3-6 are where conversations start compounding and niche performance becomes clear. Six months gives the system a fair runway to prove itself.</p>
+
+    <p>For comparison: the lead gen consultant quoted $10,000 for a plan and four weeks of support, with no ongoing execution. A marketing agency doing similar outreach work would run $3,000-$5,000/month.</p>
+  </section>
+
+  <!-- What we need -->
+  <section>
+    <div class="section-label">Requirements</div>
+    <h2>What we need from you</h2>
+    <div class="needs-list">
+      <div class="need-item">
+        <div class="need-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M7 3v8M3 7h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="need-text"><strong>A planning session with Colin, Grant, and PJ</strong> to identify the two or three strongest verticals and map the outreach strategy</div>
+      </div>
+      <div class="need-item">
+        <div class="need-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M7 3v8M3 7h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="need-text"><strong>Access to materials:</strong> client list, testimonials, any target lists PJ has compiled</div>
+      </div>
+      <div class="need-item">
+        <div class="need-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M7 3v8M3 7h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="need-text"><strong>30 minutes monthly</strong> to review the numbers with Colin and approve adjustments</div>
+      </div>
+      <div class="need-item">
+        <div class="need-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M7 3v8M3 7h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="need-text"><strong>Follow up on warm leads within 48 hours</strong> when Linda flags them</div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Implementation & Support</h2>
-      <p class="section-subtitle">We provide comprehensive support to ensure successful deployment and ongoing optimization of your lead generation system.</p>
-      
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>Dedicated Implementation Team</h3>
-          <p>Our experts guide you through planning, integration, and launch. We handle technical setup so your team can focus on strategy.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Training & Resources</h3>
-          <p>Comprehensive training for your team, documentation, video tutorials, and ongoing webinars to keep you updated on new features.</p>
-        </div>
-        <div class="feature-card">
-          <h3>24/7 Technical Support</h3>
-          <p>Dedicated support channel for technical issues. Priority resolution for critical production issues affecting your customers.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Continuous Optimization</h3>
-          <p>Quarterly business reviews, performance analysis, and recommendations for improving lead generation results and ROI.</p>
-        </div>
+  <!-- Timeline -->
+  <section>
+    <div class="section-label">Roadmap</div>
+    <h2>Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div><span class="month">Month 1</span></div>
+        <div class="detail">Planning session, prospect lists (Tier 1 and Tier 2) across chosen niches, outreach playbook, Linda SOPs. Outreach begins in the second half of the month.</div>
+      </div>
+      <div class="timeline-item">
+        <div><span class="month">Month 2</span></div>
+        <div class="detail">Full outreach cadence running across niches. Early signals on what messaging and which verticals resonate.</div>
+      </div>
+      <div class="timeline-item">
+        <div><span class="month">Month 3</span></div>
+        <div class="detail">Enough data to compare niche performance. Shift volume toward what's converting. Refine templates.</div>
+      </div>
+      <div class="timeline-item">
+        <div><span class="month">Months 4-6</span></div>
+        <div class="detail">System at full pace, focused on the strongest niche(s). Monthly reviews focused on conversations and pipeline growth.</div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Business Impact</h2>
-      <p class="section-subtitle">See the measurable results our platform delivers for ESP partners.</p>
-      
-      <div class="stats-container">
-        <div class="stat-item">
-          <div class="stat-number">3.5x</div>
-          <div class="stat-label">Revenue Growth</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">45%</div>
-          <div class="stat-label">Churn Reduction</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">6M+</div>
-          <div class="stat-label">Leads Qualified</div>
-        </div>
+  <!-- Next steps -->
+  <section>
+    <div class="section-label">Action</div>
+    <h2>Next steps</h2>
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-text">Grant and PJ review this proposal</div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-text">Schedule the planning session with Colin, Grant, and PJ</div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-text">Colin builds the system in the first two weeks</div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <div class="step-text">Linda starts outreach execution in week three</div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">5</div>
+        <div class="step-text">First monthly report lands end of month one</div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Pricing</h2>
-      <p class="section-subtitle">Flexible pricing models designed to align with your business goals and customer segments.</p>
-      
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>Starter</h3>
-          <p><strong>$2,999/month</strong></p>
-          <p style="margin-top: 16px; font-size: 14px;">Up to 10,000 leads/month, basic analytics, email support, single CRM integration</p>
-        </div>
-        <div class="feature-card">
-          <h3>Growth</h3>
-          <p><strong>$7,999/month</strong></p>
-          <p style="margin-top: 16px; font-size: 14px;">Up to 50,000 leads/month, advanced analytics, priority support, 3 CRM integrations</p>
-        </div>
-        <div class="feature-card">
-          <h3>Enterprise</h3>
-          <p><strong>Custom</strong></p>
-          <p style="margin-top: 16px; font-size: 14px;">Unlimited leads, custom integrations, dedicated success manager, white-label options</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>Next Steps</h2>
-      <p class="section-subtitle">Ready to transform your ESP into a lead generation powerhouse? Let's explore how this partnership can drive growth for your business.</p>
-      
-      <button class="cta-button" style="margin-top: 24px;">Schedule a Demo</button>
-    </div>
-  </section>
-</main>
+</div>
 
 <footer>
   <div class="container">
-    <div class="footer-branding">
-      <img id="footer-logo" src="" alt="Amplify Intelligence">
-      <div>
-        <div style="color: var(--amplify-white); font-weight: 600;">Amplify Intelligence</div>
-        <div class="footer-text">Intelligent Lead Generation</div>
-      </div>
+    <div class="footer-brand">
+      <img src="logo.png" alt="" />
+      <span>Amplify Intelligence Group Ltd</span>
     </div>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Contact Us</a>
+    <div class="footer-meta">
+      Confidential. Prepared for ESP.
     </div>
   </div>
 </footer>
 
-<script>
-  // Embedded logo (base64 PNG)
-  const logo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==';
-  document.getElementById('header-logo').src = logo;
-  document.getElementById('footer-logo').src = logo;
-</script>
+
 
 </body>
 </html>
