@@ -382,7 +382,7 @@
   }
   .timeline-item {
     display: grid;
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: auto 1fr;
     gap: 24px;
     padding: 24px 0;
     border-bottom: 1px solid #F0F0F0;
@@ -400,7 +400,8 @@
     background: var(--amplify-valencia);
     border-radius: 5px;
     text-align: center;
-    display: inline-block;
+    display: block;
+    white-space: nowrap;
   }
   .timeline-item .detail {
     font-size: 15px;
