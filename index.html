@@ -39,7 +39,8 @@
   /* Header */
   header {
     background: var(--amplify-black);
-    padding: 28px 0;
+    padding: 24px 0;
+    border-bottom: 2px solid var(--amplify-valencia);
   }
   header .container {
     display: flex;
@@ -49,18 +50,10 @@
   .logo-mark {
     display: flex;
     align-items: center;
-    gap: 14px;
   }
   .logo-mark img {
-    width: 40px;
-    height: 40px;
-  }
-  .logo-mark span {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 17px;
-    letter-spacing: -0.01em;
-    color: var(--amplify-white);
+    height: 32px;
+    width: auto;
   }
   .header-meta {
     font-size: 13px;
@@ -72,7 +65,8 @@
   /* Hero */
   .hero {
     padding: 80px 0 64px;
-    background: linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%);
+    background: linear-gradient(180deg, #F5F5F5 0%, #FFFFFF 100%);
+    border-bottom: 1px solid #EBEBEB;
   }
   .hero-tag {
     display: inline-block;
@@ -332,11 +326,12 @@
 
   /* Investment section */
   .investment-section {
-    background: linear-gradient(135deg, #F8F8F8 0%, #F2F2F2 100%);
+    background: linear-gradient(135deg, #FAFAFA 0%, #F3F3F3 100%);
     border-radius: 14px;
     padding: 44px;
     margin: 28px 0;
-    border: 1px solid #E8E8E8;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
   }
   .price-display {
     display: flex;
@@ -480,8 +475,9 @@
   /* Footer */
   footer {
     background: var(--amplify-black);
-    padding: 36px 0;
+    padding: 32px 0;
     margin-top: 32px;
+    border-top: 2px solid var(--amplify-valencia);
   }
   footer .container {
     display: flex;
@@ -491,18 +487,11 @@
   .footer-brand {
     display: flex;
     align-items: center;
-    gap: 12px;
   }
   .footer-brand img {
-    width: 28px;
-    height: 28px;
-    opacity: 0.5;
-  }
-  .footer-brand span {
-    font-family: var(--font-heading);
-    font-weight: 500;
-    font-size: 13px;
-    color: rgba(255,255,255,0.35);
+    height: 22px;
+    width: auto;
+    opacity: 0.45;
   }
   .footer-meta {
     font-size: 12px;
@@ -528,7 +517,7 @@
   @media print {
     body { font-size: 14px; }
     header { background: #F5F5F5; }
-    .logo-mark span { color: var(--amplify-black); }
+    .logo-mark img, .footer-brand img { filter: invert(1); }
     .header-meta { color: #888; }
     .hero { padding: 40px 0 32px; background: white; }
     section { padding: 32px 0; }
@@ -538,7 +527,6 @@
     .grant-box ul li { color: #333; }
     .grant-box .tagline { color: #888; }
     footer { background: #F5F5F5; }
-    .footer-brand span { color: #888; }
     .footer-meta { color: #AAA; }
   }
 </style>
@@ -548,8 +536,7 @@
 <header>
   <div class="container">
     <div class="logo-mark">
-      <img src="data:image/png;base64,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" alt="Amplify Intelligence" />
-      <span>Amplify Intelligence</span>
+      <img src="logo.png" alt="Amplify Intelligence" />
     </div>
     <div class="header-meta">
       Prepared by Colin Scotland<br>
@@ -798,8 +785,7 @@
 <footer>
   <div class="container">
     <div class="footer-brand">
-      <img src="data:image/png;base64,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" alt="" />
-      <span>Amplify Intelligence Group Ltd</span>
+      <img src="logo.png" alt="Amplify Intelligence" />
     </div>
     <div class="footer-meta">
       Confidential. Prepared for ESP.
